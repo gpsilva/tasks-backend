@@ -52,9 +52,19 @@ pipeline {
                 }
             }
         }
+        stage ('Functional Test') {
+            steps {
+                dir('functional-test'){
+                    git 'https://github.com/gpsilva/tasks-functional-tests'
+                    bat 'mvn test'
+                }
+            }
+        }
     }
 }
 
+// https://github.com/gpsilva/tasks-functional-tests
+// https://github.com/gpsilva/tasks-api-test
 // https://github.com/gpsilva/tasks-frontend
 // deploy adapters: [tomcat8(credentialsId: 'TomcatLogin', path: '', url: 'http://192.168.0.104:8001')], contextPath: 'tasks-backend', war: 'target/tasks-backend.war'
 // SONAR_LOCAL_QG
