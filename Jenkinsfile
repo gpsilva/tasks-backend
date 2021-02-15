@@ -32,4 +32,3 @@ pipeline {
     }
 }
 
-SONAR_LOCAL_QG
