@@ -24,4 +24,3 @@ pipeline {
     }
 }
 
--Dsonar.projectKey=DeployBack -Dsonar.host.url=http://192.168.15.64:9000 -Dsonar.login=bc3ade4b87fa1b77afd490c48fe5b43235ae09fe -Dsonar.java.binaries=target -Dsonar.coverage.exclusions=**/.mvn/**,**/src/test/**,**/model/**,**Application.java
