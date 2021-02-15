@@ -7,5 +7,12 @@ pipeline {
             }
         }
     }
+    stages {
+        stage ('Unit Tests') {
+            steps {
+                bat 'mvn test'
+            }
+        }
+    }
 
 }
