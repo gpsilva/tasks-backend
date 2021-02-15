@@ -42,8 +42,19 @@ pipeline {
                 }
             }
         }
+        stage ('Deploy Frontend') {
+            steps {
+                dir('frontend') {
+                    git 'https://github.com/gpsilva/tasks-frontend'
+                    bat 'mvn clean package'
+                    deploy adapters: [tomcat8(credentialsId: 'TomcatLogin', path: '', url: 'http://localhost:8001')], contextPath: 'tasks', war: 'target/tasks.war'
+            
+                }
+            }
+        }
     }
 }
 
+// https://github.com/gpsilva/tasks-frontend
 // deploy adapters: [tomcat8(credentialsId: 'TomcatLogin', path: '', url: 'http://192.168.0.104:8001')], contextPath: 'tasks-backend', war: 'target/tasks-backend.war'
 // SONAR_LOCAL_QG
