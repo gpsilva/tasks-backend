@@ -75,8 +75,8 @@ pipeline {
 //                    bat 'mvn verify -Dskip.surefire.tests'
 //               }
 //            }
-//        }
-//    }
+//       }
+   }
 }
 
 // https://github.com/gpsilva/tasks-functional-tests
