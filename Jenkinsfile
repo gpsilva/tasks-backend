@@ -78,9 +78,10 @@ pipeline {
 //       }
    }
    post {
-       junit allowEmptyResults: true, testResults: '/target/surefire-reports/*.xml, api/test/target/surefire-reports/*.xml, functional-test/target/surefire-reports/*.xml, functional-test/target/failsafe-reports/*.xml'
-
-   }
+       always {
+            junit allowEmptyResults: true, testResults: '/target/surefire-reports/*.xml, api/test/target/surefire-reports/*.xml, functional-test/target/surefire-reports/*.xml, functional-test/target/failsafe-reports/*.xml'
+       }
+    }
 }
 
 // https://github.com/gpsilva/tasks-functional-tests
