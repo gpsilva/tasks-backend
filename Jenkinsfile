@@ -66,17 +66,17 @@ pipeline {
                 bat 'docker-compose up -d'
             }
         }
-        stage ('Health Check') {
-            steps {
-                sleep(20) {
-                    // on interrupt do
-                }
-                dir('functional-test'){
-                    bat 'mvn verify -Dskip.surefire.tests'
-                }
-            }
-        }
-    }
+//        stage ('Health Check') {
+//            steps {
+//                sleep(20) {
+//                    // on interrupt do
+//                }
+//                dir('functional-test'){
+//                    bat 'mvn verify -Dskip.surefire.tests'
+//               }
+//            }
+//        }
+//    }
 }
 
 // https://github.com/gpsilva/tasks-functional-tests
