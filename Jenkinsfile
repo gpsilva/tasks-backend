@@ -88,7 +88,6 @@ pipeline {
         fixed {
            emailext attachLog: true, body: 'See attached log' subject: 'Build $BUILD_NUMBER has failed', to: 'gilvan.silva+jenkins@certsys.com.br'
        }
-
     }
 }
 
